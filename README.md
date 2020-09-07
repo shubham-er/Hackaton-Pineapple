@@ -1,8 +1,12 @@
 # Hackaton-Pineapple
 
-1. Load NSE_classification.xlsx in dataset
+1. Login to your IBM pack for data plateform and create a new project.
 
-2. Change path and ibm_api_key_id of object storage bucket in notebook where you see below lines
+2. Load NSE_classification.xlsx in dataset.
+
+3. Create watson studio notebook from file and use Trade_Settlement.ipynb.
+
+4. Change path and ibm_api_key_id of object storage bucket in notebook where you see below lines
 
 The following code accesses a file in your IBM Cloud Object Storage. It includes your credentials.
 
@@ -14,7 +18,7 @@ client_6a94a2d51103455f82f9a755c24f1ed0 = ibm_boto3.client(service_name='s3',
 
 body = client_6a94a2d51103455f82f9a755c24f1ed0.get_object(Bucket='lticitihackathonpro-donotdelete-pr-lpkddav7n9w3qp',Key='NSE_classification.xlsx')['Body']
 
-3. Change api_key and location to your Watson Machine Learning instance where you see below lines
+5. Create an instance of Watson Machine Learnin and change api_key and location to your Watson Machine Learning instance where you see below lines
 
 api_key = 'xxxxxxxxxxxxxxxx'
 location = 'us-south'
@@ -24,11 +28,11 @@ wml_credentials = {
 }
 from ibm_watson_machine_learning import APIClient
 
-4. Create Deployment space and attach WML with it and change space id with your space id where you see below line
+6. Create Deployment space and attach WML with it and change space id with your space id where you see below line
 
 space_id = 'xxxxxxxxxxxxxxxxxxx'
 
-5. Save and run notebook. It will train and validate and deploy model.
+7. Save and run notebook. It will train and validate and deploy model.
 
 In the end of notebook python code is written to deploy model as batch job and create and run job to test deployed model with sample input.
 
