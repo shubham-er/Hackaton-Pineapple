@@ -4,7 +4,7 @@
 
 2. Change path and ibm_api_key_id of object storage bucket in notebook where you see below lines
 
-# The following code accesses a file in your IBM Cloud Object Storage. It includes your credentials.
+The following code accesses a file in your IBM Cloud Object Storage. It includes your credentials.
 client_6a94a2d51103455f82f9a755c24f1ed0 = ibm_boto3.client(service_name='s3',
     ibm_api_key_id='xxxxxxxxxxxxxxxxxxx',
     ibm_auth_endpoint="https://iam.cloud.ibm.com/oidc/token",
